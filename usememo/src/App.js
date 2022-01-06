@@ -15,8 +15,10 @@ function App() {
    * Therefore it can make sense to wrap
    * the function inside the useMemo hook.
    * Here the return value of the function
-   * is cached until the
-   * value actually changes.
+   * is cached until the value actually changes.
+   * But it can cause some memory overhead,
+   * therefore it should not be exaggerately
+   * used everywhere.
    */
   const doubleNumber = useMemo(() => {
     return slowFunction(number);
